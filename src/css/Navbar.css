@@ -1,0 +1,25 @@
+nav {
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  border-bottom: white solid 3px;
+}
+nav button {
+  border-radius: 3px;
+  border: solid snow 2px;
+  background-color: transparent;
+  padding: 12px 18px;
+  font-size: 18px;
+  margin: 1vh 0px;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+  color: snow;
+}
+
+ul a{
+    color: white;
+    text-decoration: none;
+    padding: 4px 8px;
+}
