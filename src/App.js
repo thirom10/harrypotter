@@ -1,18 +1,14 @@
 //import logo from './logo.svg';
-import "./App.css";
-//import MovieSlider from './components/ui/MovieSlider';
-import Galery from "./pages/Galery";
-import Navbar from "./components/common/Navbar";
+import './App.css';
+import Footer from './components/common/Footer';
+import MovieSlider from './components/ui/MovieSlider';
+//import Galery from './pages/Galery';
 function App() {
   return (
-    <>
-      <header>
-        <Navbar />
-      </header>
-      <div className="App">
-        <Galery />
-      </div>
-    </>
+    <div className="App">
+      <MovieSlider />
+      <Footer/>
+    </div>
   );
 }
 
