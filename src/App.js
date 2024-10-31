@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import MovieSlider from './components/ui/MovieSlider';
 
 function App() {
   return (
     <div className="App">
-      <h1>hola, me llaman romeo :v</h1>
+      <MovieSlider />
     </div>
   );
 }

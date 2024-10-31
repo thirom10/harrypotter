@@ -1,0 +1,41 @@
+/* MovieSlider.css */
+
+.slider-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .movie-card {
+    transition: transform 0.3s ease;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.8);
+  }
+  
+  .movie-card.active {
+    transform: scale(1.2);
+    opacity: 1;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .movie-info {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-info h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .movie-info p {
+    font-size: 18px;
+    color: #555;
+  }
+  
