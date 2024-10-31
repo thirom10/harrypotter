@@ -5,7 +5,7 @@ import "../css/Galery.css";
 const Galery = () => {
   const [data, setData] = useState([]);
   // { String } filter - Guarda el parametro que define el filtro que se realizara
-  const [filter, setFilter] = useState("potions");
+  const [filter, setFilter] = useState("characters");
   const fetchHpApi = (filter) => {
     let url;
 
@@ -22,7 +22,7 @@ const Galery = () => {
       case "spells":
         url = "https://hp-api.herokuapp.com/api/spells";
         break;
-      
+
       default:
         return;
     }
@@ -32,7 +32,7 @@ const Galery = () => {
       .then((result) => setData(result.slice(0, 20))) // Limitar a 10 elementos
       .catch((error) => console.error("Error fetching data:", error));
   };
-console.log(data)
+  console.log(data);
   useEffect(() => {
     fetchHpApi(filter);
   }, [filter]);
@@ -50,24 +50,29 @@ console.log(data)
 
       <div className="galery">
         {data.map((item, index) => (
-          <div className="item" key={index}>
+          <div
+            className="item"
+            key={index}
+            style={{
+              backgroundImage: `url(${item.image})`,
+              backgroundSize: "cover", // Para que la imagen cubra el área
+              backgroundPosition: "center", // Centrar la imagen
+              width: "200px", // Ajusta el ancho
+              height: "200px", // Ajusta la altura
+            }}
+            id={item.house}
+          >
             {filter === "students" ||
             filter === "teachers" ||
             filter === "characters" ? (
               <>
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="character-image"
-                />
                 <h3 className="item-name">{item.name}</h3>
-                <p className="item-description">
-                  <strong>Casa:</strong> {item.house || "N/A"}
+                <p className="item-description" id={item.house}>
+                  Casa: {item.house || "N/A"}
                 </p>
               </>
             ) : filter === "spells" ? (
               <>
-                
                 <h3 className="item-name">{item.name}</h3>
                 <p className="item-description">
                   <strong>Efecto:</strong> {item.description || "N/A"}

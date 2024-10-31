@@ -1,5 +1,4 @@
 .filter {
-  background-color: snow;
   height:100%;
   width: 20vw;
   display: flex;
@@ -8,17 +7,18 @@
 }
 .filter button {
   border-radius: 3px;
-  border: solid black 2px;
+  border: solid snow 2px;
   background-color: transparent;
   padding: 12px 18px;
   font-size: 18px;
   margin: 1vh 0px;
   transition: ease-in-out 0.2s;
   cursor: pointer;
+  color: snow;
 }
 .filter button:hover {
-  background-color: black;
-  color: snow;
+  background-color: snow;
+  color: #1C1C1C;
 }
 .filter button:active {
   transform: translateY(0.3vh);
@@ -26,12 +26,12 @@
 .galery_container {
   display: flex;
   height: fit-content;
-  background-color: snow;
+  background-color: #000000;
 }
 .galery {
-  background-color: #f7f7ff;
+  background-color: #1C1C1C;
   width: 80vw;
-  border-left: solid gray 2px;
+  border-left: solid snow 2px;
   min-height: 130vh;
   height: fit-content;
   display: grid;
@@ -45,13 +45,22 @@
   font-weight: 900;
 }
 .item{
-    border: solid black 2px;
+    border: solid snow 2px;
     border-radius: 2px;
-    display: grid;
+    display: flex;
     width: 20vw;
-    place-content: center;
+    margin-bottom: 5vh;
+    padding: 2vh;
+    height: fit-content;
+    color: black;
+    background-color: #000000;
+  flex-direction: column;
+  justify-content:flex-end;
     transition: ease-in-out 0.2s;
     cursor: pointer;
+}
+h3, p, strong {
+  color: black;
 }
 .item:hover{
     background-color: black;
@@ -71,9 +80,34 @@
 .item-name {
   font-size: 1.2em; 
   margin: 0; 
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: rgba(240, 248, 255, 0.541);
+  transform: translateY(10vh);
+  font-weight: bold;
 }
 
 .item-description {
   font-size: 0.9em; 
-  color: #666; 
+  color: black; 
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: rgba(240, 248, 255, 0.541);
+  transform: translateY(10vh);
+}
+#Gryffindor{
+  background-color: #7F0909;
+  border: 3px solid #7F0909;
+}
+#Hufflepuff {
+  background-color: #FFDB00;
+  border: 3px solid #FFDB00;
+}
+#Ravenclaw {
+  background-color: #0E1A40;
+  border: 3px solid #0E1A40;
+}
+#Slytherin{
+  background-color:  #2A623D;
+  border: 3px solid  #2A623D;
 }
