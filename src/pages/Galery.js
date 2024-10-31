@@ -55,10 +55,10 @@ const Galery = () => {
             key={index}
             style={{
               backgroundImage: `url(${item.image})`,
-              backgroundSize: "cover", // Para que la imagen cubra el área
-              backgroundPosition: "center", // Centrar la imagen
-              width: "200px", // Ajusta el ancho
-              height: "200px", // Ajusta la altura
+              backgroundSize: "cover", 
+              backgroundPosition: "center", 
+              width: "200px", 
+              height: "200px", 
             }}
             id={item.house}
           >
