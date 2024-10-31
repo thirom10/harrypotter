@@ -1,0 +1,79 @@
+.filter {
+  background-color: snow;
+  height:100%;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh;
+}
+.filter button {
+  border-radius: 3px;
+  border: solid black 2px;
+  background-color: transparent;
+  padding: 12px 18px;
+  font-size: 18px;
+  margin: 1vh 0px;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+}
+.filter button:hover {
+  background-color: black;
+  color: snow;
+}
+.filter button:active {
+  transform: translateY(0.3vh);
+}
+.galery_container {
+  display: flex;
+  height: fit-content;
+  background-color: snow;
+}
+.galery {
+  background-color: #f7f7ff;
+  width: 80vw;
+  border-left: solid gray 2px;
+  min-height: 130vh;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(34, 1fr);
+  gap: 2vh;
+  padding: 1.5vh;
+}
+* {
+  font-family: poppins;
+  font-weight: 900;
+}
+.item{
+    border: solid black 2px;
+    border-radius: 2px;
+    display: grid;
+    width: 20vw;
+    place-content: center;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+}
+.item:hover{
+    background-color: black;
+  color: snow;
+}
+.character-image,
+.spell-image,
+.potion-image {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 200px; 
+  border-radius: 3px;
+  height: auto; 
+  margin-bottom: 10px; 
+}
+.item-name {
+  font-size: 1.2em; 
+  margin: 0; 
+}
+
+.item-description {
+  font-size: 0.9em; 
+  color: #666; 
+}
