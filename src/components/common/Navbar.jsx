@@ -1,17 +1,18 @@
 import "../../css/Navbar.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <h1>Harry potter</h1>
+    <nav>
+      <h1>Harry Potter</h1>
       <ul>
-        <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/peliculas">Peliculas</Link></li>
-        <li><Link to="/canciones">Canciones</Link></li>
-        <li><Link to="/miembros">Miembros</Link></li>
-        <li><Link to="/contacto">Contacto</Link></li>
+        <a><Link to="/">Home</Link></a>
+        <a><Link to="/">Houses</Link></a>
+        <a><Link to="/">Gallery</Link></a>
+        <a><Link to="/peliculas">Movies</Link></a>
+        <a><Link to="/">About This</Link></a>
       </ul>
+      <button>Discover your House!</button>
     </nav>
   );
 };

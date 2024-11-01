@@ -1,14 +1,13 @@
-// Requerimentos
 import { useState, useEffect } from "react";
-// Hoja de Estilos
 import "../css/Galery.css";
+
 const Galery = () => {
   const [data, setData] = useState([]);
-  // { String } filter - Guarda el parametro que define el filtro que se realizara
   const [filter, setFilter] = useState("characters");
+  const [itemsToShow, setItemsToShow] = useState(20);
+
   const fetchHpApi = (filter) => {
     let url;
-
     switch (filter) {
       case "students":
         url = "https://hp-api.onrender.com/api/characters/students";
@@ -22,44 +21,66 @@ const Galery = () => {
       case "spells":
         url = "https://hp-api.herokuapp.com/api/spells";
         break;
-
       default:
         return;
     }
 
     fetch(url)
       .then((response) => response.json())
-      .then((result) => setData(result.slice(0, 20))) // Limitar a 10 elementos
+      .then((result) => {
+        setData(result);
+        setItemsToShow(20);
+      })
       .catch((error) => console.error("Error fetching data:", error));
   };
-  console.log(data);
+
   useEffect(() => {
     fetchHpApi(filter);
   }, [filter]);
+
+  const loadMoreItems = () => {
+    setItemsToShow((prev) => prev + 20);
+  };
 
   return (
     <div className="galery_container">
       <h1>Welcome to the Harry Potter Gallery!</h1>
       <div className="filter">
-        <button onClick={() => setFilter("characters")}>
+        <button
+          onClick={() => setFilter("characters")}
+          className={filter === "characters" ? "active" : ""}
+        >
           Todos los Personajes
         </button>
-        <button onClick={() => setFilter("students")}>Alumnos</button>
-        <button onClick={() => setFilter("teachers")}>Profesores</button>
-        <button onClick={() => setFilter("spells")}>Hechizos</button>
+        <button
+          onClick={() => setFilter("students")}
+          className={filter === "students" ? "active" : ""}
+        >
+          Alumnos
+        </button>
+        <button
+          onClick={() => setFilter("teachers")}
+          className={filter === "teachers" ? "active" : ""}
+        >
+          Profesores
+        </button>
+        <button
+          onClick={() => setFilter("spells")}
+          className={filter === "spells" ? "active" : ""}
+        >
+          Hechizos
+        </button>
       </div>
 
       <div className="galery">
-        {data.map((item, index) => (
+        {data.slice(0, itemsToShow).map((item, index) => (
           <div
             className="item"
             key={index}
             style={{
               backgroundImage: `url(${item.image})`,
-              backgroundSize: "cover", 
-              backgroundPosition: "center", 
-              width: "19.5vw", 
-              height: "22vw", 
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
             id={item.house}
           >
@@ -83,8 +104,11 @@ const Galery = () => {
           </div>
         ))}
       </div>
-      <button>Ver mas</button>
+      {itemsToShow < data.length && (
+        <button onClick={loadMoreItems}>Ver más</button>
+      )}
     </div>
   );
 };
+
 export default Galery;
