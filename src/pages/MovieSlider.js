@@ -2,7 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
-import "../../css/MovieSlider.css";
+import "../css/MovieSlider.css";
 import axios from "axios";
 
 const MovieSlider = () => {

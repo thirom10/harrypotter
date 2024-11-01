@@ -7,10 +7,10 @@ const Navbar = () => {
       <h1>Harry Potter</h1>
       <ul>
         <a><Link to="/">Home</Link></a>
-        <a><Link to="/">Houses</Link></a>
+        <a><Link to="/book">Book</Link></a>
         <a><Link to="/">Gallery</Link></a>
         <a><Link to="/peliculas">Movies</Link></a>
-        <a><Link to="/">About This</Link></a>
+        <a><Link to="/books">About This</Link></a>
       </ul>
       <button>Discover your House!</button>
     </nav>
