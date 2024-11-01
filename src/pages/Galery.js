@@ -39,6 +39,7 @@ const Galery = () => {
 
   return (
     <div className="galery_container">
+      <h1>Welcome to the Harry Potter Gallery!</h1>
       <div className="filter">
         <button onClick={() => setFilter("characters")}>
           Todos los Personajes
@@ -57,8 +58,8 @@ const Galery = () => {
               backgroundImage: `url(${item.image})`,
               backgroundSize: "cover", 
               backgroundPosition: "center", 
-              width: "200px", 
-              height: "200px", 
+              width: "19.5vw", 
+              height: "22vw", 
             }}
             id={item.house}
           >
@@ -82,6 +83,7 @@ const Galery = () => {
           </div>
         ))}
       </div>
+      <button>Ver mas</button>
     </div>
   );
 };
