@@ -1,0 +1,55 @@
+.presentation{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid white 2px;
+}
+.presentation h1{
+    font-size: 36px;
+}
+.houseBTN{
+    padding: 20px 28px;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    border: solid white 2px;
+    border-radius: 3px;
+    background-color: transparent;
+}
+.houses{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px;
+}
+.house_card{
+    height: 35vh;
+    padding: 20px;
+    display: flex;
+    text-justify: center;
+}
+.content .top text{
+    text-justify: center;
+}
+.house_card img{
+    height: 100%;
+}
+.bot{
+    display: flex;
+    justify-content: space-evenly;
+}
+.bot .virtue{
+    padding: 10px 14px;
+    border: solid white 3px;
+    margin: 0.87261827278rem; /* Yo te quiero thiago */
+    border-radius: 999999999999999999999999999999999px;                                                                                                                     /*OOOSAAAA TE ASUSTASTE WACHIN*/            border-radius: 6px;
+}
+#Slytherin, #Ravenclaw{
+    flex-direction: row-reverse;
+}
+#Slytherin, #Ravenclaw, #Gryffindor, #Hufflepuff{
+    background-color: transparent;
+}

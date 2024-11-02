@@ -1,0 +1,63 @@
+.quiz-container {
+    text-align: center;
+    font-family: 'Caveat', cursive; /* Usa una fuente mágica */
+    color: #6b4226; /* Color inspirado en Harry Potter */
+    background-color: #f8f3ea;
+    padding: 20px;
+  }
+  
+  .start-button {
+    background-color: #4b2e83;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  
+  .start-button:hover {
+    background-color: #391d59;
+  }
+  
+  .modal {
+    background-color: #686868;
+    border: 2px solid #6b4226;
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+    border-radius: 8px;
+    position: relative;
+    font-family: 'Caveat', cursive;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .option {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+  
+  .nav-button {
+    background-color: #4b2e83;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .nav-button:hover {
+    background-color: #391d59;
+  }
+  
+  .results {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
